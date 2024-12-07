@@ -34,8 +34,4 @@ function makeCalculator() {
   return calculator;
 }
 
-// const calculator = makeCalculator();
-// calculator.operate(calculator.multiply, 10);
-// console.log(calculator.result);
-
 module.exports = makeCalculator;
