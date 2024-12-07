@@ -2,6 +2,7 @@
 
 /**
  *
+ *
  * @return {object}
  */
 function makeCalculator() {
