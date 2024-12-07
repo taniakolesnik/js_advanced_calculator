@@ -1,10 +1,41 @@
 'use strict';
 
 /**
+ *
  * @return {object}
  */
 function makeCalculator() {
-  // write code here
+  const calculator = {
+    result: 0,
+    add(value, currentResult) {
+      return currentResult + value;
+    },
+    subtract(value, currentResult) {
+      return currentResult - value;
+    },
+    multiply(value, currentResult) {
+      return currentResult * value;
+    },
+    divide(value, currentResult) {
+      return currentResult / value;
+    },
+    reset() {
+      this.result = 0;
+
+      return this;
+    },
+    operate(callback, input) {
+      this.result = callback(input, this.result);
+
+      return this;
+    },
+  };
+
+  return calculator;
 }
+
+// const calculator = makeCalculator();
+// calculator.operate(calculator.multiply, 10);
+// console.log(calculator.result);
 
 module.exports = makeCalculator;
